@@ -2,7 +2,6 @@
 module.exports = (sequelize) => {
   const PostsCategory = sequelize.define('PostsCategory', {},
     {
-      underscored: true,
       timestamps: false,
       tableName: 'games_tags',
     });

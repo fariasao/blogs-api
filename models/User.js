@@ -28,7 +28,6 @@ const Attributes = { // exemplo dado pelo gaspar para sair do lint
 module.exports = (sequelize) => {
   const User = sequelize.define('User', Attributes,
   {
-      underscored: true,
       timestamps: false,
       tableName: 'Users',
     });
