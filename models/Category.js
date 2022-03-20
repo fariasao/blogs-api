@@ -7,7 +7,7 @@ const Attributes = {
     allowNull: false,
     autoIncrement: true,
   },
-  Name: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
