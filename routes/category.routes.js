@@ -8,4 +8,6 @@ const categoryRouter = express.Router();
 
 categoryRouter.post('/categories', authMiddleware, validateName, categoryController.createCategory);
 
+categoryRouter.get('/categories', authMiddleware, categoryController.getAllCategory);
+
 module.exports = categoryRouter;
