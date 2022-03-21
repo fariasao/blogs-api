@@ -20,9 +20,5 @@ module.exports = (sequelize) => {
       tableName: 'Categories',
     });
 
-  Category.associate = (models) => { // um usuario pode fazer varios posts. 
-    Category.hasMany(models.BlogPost, { foreignKey: 'CategoryId', as: 'BlogPosts' });
-  };
-
   return Category;
 }; 

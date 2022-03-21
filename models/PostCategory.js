@@ -3,7 +3,7 @@ module.exports = (sequelize) => {
   const PostsCategory = sequelize.define('PostsCategory', {},
     {
       timestamps: false,
-      tableName: 'games_tags',
+      tableName: 'PostsCategories',
     });
 
   PostsCategory.associate = (models) => {
@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
 
     models.Category.belongsToMany(
       models.BlogPost,
-      { foreignKey: 'categoryId', otherKey: 'postId', through: PostsCategory, as: 'postId' },
+      { foreignKey: 'categoryId', otherKey: 'postId', through: PostsCategory, as: 'blogPosts' },
     );
   };
 
